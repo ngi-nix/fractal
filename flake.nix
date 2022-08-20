@@ -1,5 +1,5 @@
 {
-  description = "(insert short project description here)";
+  description = "Matrix group messaging app (nightly version)";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
