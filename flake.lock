@@ -24,18 +24,33 @@
     "fractal-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1657451726,
-        "narHash": "sha256-6op/+eiDra5EFRludpkQOucBXdPl5a/oQWPwwhJEx+M=",
-        "ref": "36eee80e4feae39e9892ec6af41bc37d4d300bc9",
-        "rev": "837b56978474fe512469805844b8ee234587499a",
-        "revCount": 710,
+        "lastModified": 1660725228,
+        "narHash": "sha256-T98QVTRvsVQqd4my+6J27omyXiLX1y85qi+W7tOL8co=",
+        "ref": "refs/heads/main",
+        "rev": "36eee80e4feae39e9892ec6af41bc37d4d300bc9",
+        "revCount": 737,
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/fractal.git"
       },
       "original": {
-        "rev": "837b56978474fe512469805844b8ee234587499a",
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/fractal.git"
+      }
+    },
+    "libadwaita-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660889061,
+        "narHash": "sha256-0ennLhBVzlaFhl/PzrBx3EM1PGvxW97OjLDFDljzn/I=",
+        "ref": "refs/heads/main",
+        "rev": "34dc7484b4ecbd1256d33910040f3147d64f1d9f",
+        "revCount": 3137,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta"
       }
     },
     "nixpkgs": {
@@ -57,6 +72,7 @@
       "inputs": {
         "fenix": "fenix",
         "fractal-src": "fractal-src",
+        "libadwaita-src": "libadwaita-src",
         "nixpkgs": "nixpkgs"
       }
     },

@@ -9,14 +9,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    libadwaita-src = {
+      url = git+https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta;
+      flake = false;
+    };
+
     fractal-src = {
-      url = git+https://gitlab.gnome.org/GNOME/fractal.git?rev=837b56978474fe512469805844b8ee234587499a;
+      url = git+https://gitlab.gnome.org/GNOME/fractal.git;
       flake = false;
     };
   };
 
 
-  outputs = { self, nixpkgs, fenix, fractal-src }:
+  outputs = { self, nixpkgs, fenix, libadwaita-src, fractal-src }:
     let
 
       # Generate a user-friendly version numer.
@@ -49,7 +54,7 @@
 
             cargoDeps = rustPlatform.fetchCargoTarball {
               inherit src;
-              hash = "sha256-2mE26ES+fYSWdfMr8uTsX2VVGTNMDQ9MXEk5E/L95UI=";
+              hash = "sha256-CJD9YmL06ELR3X/gIrsVCpDyJnWPbH/JF4HlXvWjiZ8=";
             };
 
             nativeBuildInputs = [
@@ -74,7 +79,7 @@
               gst-plugins-bad
               gtk4
               gtksourceview5
-              libadwaita
+              (libadwaita.overrideAttrs (old: { version = "1.2.beta"; src = libadwaita-src; }))
               libsecret
               openssl
               pipewire
