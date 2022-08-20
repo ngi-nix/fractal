@@ -23,21 +23,15 @@
 
   outputs = { self, nixpkgs, fenix, libadwaita-src, fractal-src }:
     let
-
-      # Generate a user-friendly version numer.
       version = builtins.substring 0 8 fractal-src.lastModifiedDate;
 
-      # System types to support.
       supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 
-      # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
 
-      # Nixpkgs instantiated for supported system types.
       nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; overlays = [ self.overlay ]; });
     in
     {
-      # A Nixpkgs overlay.
       overlay = final: prev:
         let
           fenix-channel = fenix.packages.${final.system}.latest;
@@ -58,6 +52,10 @@
             };
 
             nativeBuildInputs = [
+              appstream-glib
+              desktop-file-utils
+              fenix-channel.cargo
+              fenix-channel.rustc
               glib
               gtk4
               meson
@@ -65,25 +63,21 @@
               pkg-config
               rustPlatform.bindgenHook
               rustPlatform.cargoSetupHook
-              fenix-channel.cargo
-              fenix-channel.rustc
-              desktop-file-utils
-              appstream-glib
               wrapGAppsHook4
             ];
 
             buildInputs = with gst_all_1; [
+              (libadwaita.overrideAttrs (old: { version = "1.2.beta"; src = libadwaita-src; }))
               glib
-              gstreamer
-              gst-plugins-base
               gst-plugins-bad
+              gst-plugins-base
+              gstreamer
               gtk4
               gtksourceview5
-              (libadwaita.overrideAttrs (old: { version = "1.2.beta"; src = libadwaita-src; }))
               libsecret
+              libshumate
               openssl
               pipewire
-              libshumate
             ];
 
             meta = with lib; {
@@ -95,15 +89,11 @@
           };
         };
 
-      # Provide some binary packages for selected system types.
       packages = forAllSystems (system:
         {
           inherit (nixpkgsFor.${system}) fractal;
         });
 
-      # The default package for 'nix build'. This makes sense if the
-      # flake provides only one package or there is a clear "main"
-      # package.
       defaultPackage = forAllSystems (system: self.packages.${system}.fractal);
     };
 }
