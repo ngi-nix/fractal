@@ -8,11 +8,11 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1660890677,
-        "narHash": "sha256-Pjo7boTFANtflin0ESiwhFIrtCfss0z2DjEbKMjeFh8=",
+        "lastModified": 1661496076,
+        "narHash": "sha256-rnnDAGYlbOAVBd+dIEaY81PsNdm1EnKAfEON+gtR3wM=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "dca822b67ddf0af52f9b63feaeefc1668c8635c0",
+        "rev": "b5cae8a0efb6b02c1874f4d278c87291804199af",
         "type": "github"
       },
       "original": {
@@ -24,15 +24,16 @@
     "fractal-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1660725228,
-        "narHash": "sha256-T98QVTRvsVQqd4my+6J27omyXiLX1y85qi+W7tOL8co=",
-        "ref": "refs/heads/main",
-        "rev": "36eee80e4feae39e9892ec6af41bc37d4d300bc9",
-        "revCount": 737,
+        "lastModified": 1661328195,
+        "narHash": "sha256-oHU3B3gJZcRPDf9Ev/UglUWtTHZV0QjBZlCv2gT9QQo=",
+        "ref": "main",
+        "rev": "3f6370fd571d6f5aac61f97cfd9de951bafa1931",
+        "revCount": 742,
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/fractal.git"
       },
       "original": {
+        "ref": "main",
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/fractal.git"
       }
@@ -40,26 +41,27 @@
     "libadwaita-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1660889061,
-        "narHash": "sha256-0ennLhBVzlaFhl/PzrBx3EM1PGvxW97OjLDFDljzn/I=",
-        "ref": "refs/heads/main",
-        "rev": "34dc7484b4ecbd1256d33910040f3147d64f1d9f",
-        "revCount": 3137,
+        "lastModified": 1661424809,
+        "narHash": "sha256-cf4rJ44C3owHShaOi9nMjOrRYdfko55/2vYJcu5dWtU=",
+        "ref": "main",
+        "rev": "c8ec0a3326d910e074d6751af1aeefc6da91f9e2",
+        "revCount": 3147,
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta"
       },
       "original": {
+        "ref": "main",
         "type": "git",
         "url": "https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1660819943,
-        "narHash": "sha256-TRZV/mlW1eYuojqDC3ueYWj7jsTKXJCtyMLNYX/Ybtw=",
+        "lastModified": 1661361016,
+        "narHash": "sha256-Bjf6ZDnDc6glTwIIItvwfcaeJ5zWFM6GYfPajSArdUY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8ea014acc33da95ea56c902229957d8225005163",
+        "rev": "b784c5ae63dd288375af1b4d37b8a27dd8061887",
         "type": "github"
       },
       "original": {
@@ -79,11 +81,11 @@
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1660838778,
-        "narHash": "sha256-SpV0kKZ5b0+w6y15x7ZvBTjxOiAfqgyPq5SWpHDxoV4=",
+        "lastModified": 1661454537,
+        "narHash": "sha256-+euf4tPX5vyVN05TBTRhVspOeNZPlmJdOf3ISu1JO6M=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "917bd68b37de4e60e7203061a0a9c23b74d2b5c2",
+        "rev": "ca8093e282cdcdfb94d2d8adc224b7d05b151f8e",
         "type": "github"
       },
       "original": {
