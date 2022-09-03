@@ -10,12 +10,12 @@
     };
 
     libadwaita-src = {
-      url = git+https://gitlab.gnome.org/GNOME/libadwaita.git?tag=1.2.beta;
+      url = "git+https://gitlab.gnome.org/GNOME/libadwaita.git?ref=main&tag=1.2.beta";
       flake = false;
     };
 
     fractal-src = {
-      url = git+https://gitlab.gnome.org/GNOME/fractal.git;
+      url = "git+https://gitlab.gnome.org/GNOME/fractal.git?ref=main";
       flake = false;
     };
   };
